@@ -1,0 +1,12 @@
+<!-- <mat-grid-list cols="1" rowHeight="2:1">
+    <mat-grid-tile fxLayout *ngFor="let previewCardItem of previewCardItems; index as i">
+        <mat-grid-tile-header><h3>{{previewCardItem.component.cardTypeName}}</h3></mat-grid-tile-header>
+        <div fxFlexAlign="center center">
+            <p>{{previewCardItem.component.cardTypeDescription}}</p>
+        </div>        
+    </mat-grid-tile>
+</mat-grid-list> -->
+
+<div *ngFor="let previewCardItem of previewCardItems">
+  <preview-container [cardItem]="previewCardItem"></preview-container>
+</div>

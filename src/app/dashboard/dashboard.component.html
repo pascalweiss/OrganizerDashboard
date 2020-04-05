@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="toolbar">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  Toolbar Title
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+    (closed)="events.push('close!')">
+    <app-add-card></app-add-card>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="dashboard dashboard-boundary">
+      <ng-container *ngFor="let cardItem of cardItems">
+          <card-container [cardItem]="cardItem"></card-container>
+      </ng-container>
+      <ng-container *ngFor="let newCardItem of newCardItems">
+          <card-container [cardItem]="newCardItem"></card-container>
+      </ng-container>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

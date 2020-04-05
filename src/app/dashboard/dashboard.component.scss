@@ -1,0 +1,25 @@
+// app-dashboard {
+//     width: 30px;
+//     height: 30px;
+// }
+
+.toolbar {
+    position: sticky;
+    position: -webkit-sticky; 
+        top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.dashboard {
+    background-color: brown; 
+    width: 1500px; 
+    height: 1000px;
+}
+
+.sidenav {
+    width: 220px;
+}
+
+.mat-drawer-content {
+    position: static;
+}

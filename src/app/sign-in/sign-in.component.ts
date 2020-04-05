@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import {  MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,10 +9,18 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
+  user = {username: '', password: '', remember: false}
 
-  constructor(public dialogRef: MatDialogRef<SignInComponent>) { }
+  constructor(
+    public dialogRef: MatDialogRef<SignInComponent>,
+    private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    this.router.navigate(['dashboard']);
+    this.dialogRef.close();
   }
 
 }
