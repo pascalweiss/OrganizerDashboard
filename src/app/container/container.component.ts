@@ -1,13 +1,11 @@
 import { Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit, ElementRef } from '@angular/core';
 import { CardItem } from '../shared/card.item';
-import { CardComponent } from '../cards/card/card.component';
-import { BehaviorSubject } from 'rxjs';
-
+import { BaseContent } from '../contents/basecontent';
 
 export abstract class Container implements OnInit {
     @Input() cardItem: CardItem;
     @ViewChild('container', {read: ViewContainerRef}) container: ViewContainerRef;
-    @Input('dragCard') component: CardComponent;
+    @Input('dragCard') component: BaseContent;
     @Input('dragDisabled')dragDisabled: Boolean;
     public isPreview = false;
     public containerStyle: any;
@@ -33,7 +31,7 @@ export abstract class Container implements OnInit {
     setComponentRef() {
         const factory = this.resolver.resolveComponentFactory(this.cardItem.component);
         const componentRef = this.container.createComponent(factory);
-        this.component = (<CardComponent>componentRef.instance);
+        this.component = (<BaseContent>componentRef.instance);
     }
 
     setComponentStyle() {

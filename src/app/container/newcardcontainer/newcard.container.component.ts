@@ -6,7 +6,7 @@ import { CardItemPosition } from 'src/app/shared/card.item';
 @Component({
     selector: 'newcard-container',
     templateUrl: './newcard.container.component.html',
-    styleUrls: ['../container.component.scss', './newcard.container.component.scss']
+    styleUrls: ['../container.component.scss']
 })
 export class NewCardContainer extends Container {
     public position: CardItemPosition;

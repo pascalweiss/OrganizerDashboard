@@ -1,10 +1,10 @@
 import { CardItem } from './card.item';
-import { NotecardComponent } from '../cards/notecard/notecard.component';
-import { ChecklistcardComponent } from '../cards/checklistcard/checklistcard.component';
+import { NotecontentComponent } from '../contents/notecontent/notecontent.component';
+import { ChecklistcontentComponent } from '../contents/checklistcontent/checklistcontent.component';
 
 export const cardpreviews: CardItem[] = [
     new CardItem(
-        NotecardComponent,
+        NotecontentComponent,
         {
             title: "NoteCard Title",
             oldPosition: undefined,
@@ -16,7 +16,7 @@ export const cardpreviews: CardItem[] = [
         }
     ),
     new CardItem(
-        ChecklistcardComponent,
+        ChecklistcontentComponent,
         {
             title: "Checklist Title",
             oldPosition: undefined,
@@ -42,7 +42,7 @@ export const cardpreviews: CardItem[] = [
 export const newcards: CardItem[] = [
     new CardItem(
 
-        NotecardComponent,
+        NotecontentComponent,
         {
             title: "NoteCard Title",
             oldPosition: { x: -220, y: 0 },
@@ -54,7 +54,7 @@ export const newcards: CardItem[] = [
         }
     ),
     new CardItem(
-        ChecklistcardComponent,
+        ChecklistcontentComponent,
         {
             title: "Checklist Title",
             oldPosition: { x: -220, y: 220 },
@@ -79,7 +79,7 @@ export const newcards: CardItem[] = [
 
 export const testcards: CardItem[] = [
     new CardItem(
-        NotecardComponent,
+        NotecontentComponent,
         {
             title: "Note Card 1",
             oldPosition: undefined,
@@ -91,7 +91,7 @@ export const testcards: CardItem[] = [
         }
     ),
     new CardItem(
-        NotecardComponent,
+        NotecontentComponent,
         {
             title: "Note Card 2",
             oldPosition: undefined,
@@ -103,7 +103,7 @@ export const testcards: CardItem[] = [
         }
     ),
     new CardItem(
-        ChecklistcardComponent,
+        ChecklistcontentComponent,
         {
             title: "Checklist Card 2",
             oldPosition: undefined,

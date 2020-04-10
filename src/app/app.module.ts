@@ -17,14 +17,13 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './routing/routing.module';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { NotecardComponent } from './cards/notecard/notecard.component';
-import { CardComponent } from './cards/card/card.component';
-import { ChecklistcardComponent } from './cards/checklistcard/checklistcard.component';
+import { NotecontentComponent } from './contents/notecontent/notecontent.component';
+import { ChecklistcontentComponent } from './contents/checklistcontent/checklistcontent.component';
 import { CardContainer } from './container/cardcontainer/card.container.component';
 import { NewCardContainer } from './container/newcardcontainer/newcard.container.component';
 import { Globals } from './shared/globals';
 import { HammerModule} from '@angular/platform-browser';
-import { AddCardComponent } from './add-card/add-card.component';
+import { SidebarPreviewsComponent } from './sidebar-previews/sidebar-previews.component';
 import { PreviewContainerComponent } from './container/previewcontainer/preview.container.component';
 
 
@@ -35,12 +34,11 @@ import { PreviewContainerComponent } from './container/previewcontainer/preview.
     SignInComponent,
     SignUpComponent,
     DashboardComponent,
-    NotecardComponent,
-    CardComponent,
-    ChecklistcardComponent,
+    NotecontentComponent,
+    ChecklistcontentComponent,
     CardContainer,
     NewCardContainer,
-    AddCardComponent,
+    SidebarPreviewsComponent,
     PreviewContainerComponent,
   ],
   imports: [

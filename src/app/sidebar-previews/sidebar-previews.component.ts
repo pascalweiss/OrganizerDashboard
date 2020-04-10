@@ -4,10 +4,10 @@ import { CardItem } from '../shared/card.item';
 
 @Component({
   selector: 'app-add-card',
-  templateUrl: './add-card.component.html',
-  styleUrls: ['./add-card.component.scss']
+  templateUrl: './sidebar-previews.component.html',
+  styles: ['']
 })
-export class AddCardComponent implements OnInit {
+export class SidebarPreviewsComponent implements OnInit {
   showFiller = false;
   public previewCardItems: CardItem[];
   constructor(private cardService: CardsService) { }
