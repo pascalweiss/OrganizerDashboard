@@ -2,6 +2,7 @@
     [ngStyle]="containerStyle" 
     class="odCardNote" 
     cdkDrag 
+    cdkDragBoundary=".dashboard-boundary"
     (dblclick)="onDoubleClick()"
     (tap)="onTap()"
     [cdkDragStartDelay]="100"

@@ -11,18 +11,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatInputModule, MatCheckboxModule, MatGridListModule, MatSidenavModule, MatIconModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule, MatCheckboxModule, MatGridListModule,
+         MatSidenavModule, MatIconModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './routing/routing.module';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NotecontentComponent } from './contents/notecontent/notecontent.component';
 import { ChecklistcontentComponent } from './contents/checklistcontent/checklistcontent.component';
 import { CardContainer } from './container/cardcontainer/card.container.component';
 import { NewCardContainer } from './container/newcardcontainer/newcard.container.component';
 import { Globals } from './shared/globals';
-import { HammerModule} from '@angular/platform-browser';
+import { HammerModule } from '@angular/platform-browser';
 import { SidebarPreviewsComponent } from './sidebar-previews/sidebar-previews.component';
 import { PreviewContainerComponent } from './container/previewcontainer/preview.container.component';
 
@@ -44,20 +45,20 @@ import { PreviewContainerComponent } from './container/previewcontainer/preview.
   imports: [
     BrowserModule,
     FlexLayoutModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     FontAwesomeModule,
     FormsModule,
-    MatToolbarModule, 
-    MatButtonModule, 
-    MatDialogModule, 
-    MatFormFieldModule, 
+    MatToolbarModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
     MatCheckboxModule,
-    MatInputModule, 
+    MatInputModule,
     AppRoutingModule,
     DragDropModule,
     HammerModule,
     MatGridListModule,
-    MatSidenavModule, 
+    MatSidenavModule,
     MatIconModule
   ],
   entryComponents: [SignInComponent, SignUpComponent],
