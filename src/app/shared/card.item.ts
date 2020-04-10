@@ -1,4 +1,5 @@
 import { Type } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 export class CardItemPosition {
   x: number; y: number;
@@ -12,5 +13,8 @@ export class CardItemData {
 }
 
 export class CardItem {
-  constructor(public component: Type<any>, public data: CardItemData) {}
+
+  constructor(public component: Type<any>, public data: CardItemData) {
+
+  }
 }

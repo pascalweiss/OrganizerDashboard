@@ -1,6 +1,7 @@
 import { Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit, ElementRef } from '@angular/core';
 import { CardItem } from '../shared/card.item';
 import { CardComponent } from '../cards/card/card.component';
+import { BehaviorSubject } from 'rxjs';
 
 
 export abstract class Container implements OnInit {
