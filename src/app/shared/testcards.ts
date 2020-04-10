@@ -1,24 +1,26 @@
 import { CardItem } from './card.item';
-import { Component } from '@angular/core';
 import { NotecardComponent } from '../cards/notecard/notecard.component';
 import { ChecklistcardComponent } from '../cards/checklistcard/checklistcard.component';
 
 export const cardpreviews: CardItem[] = [
-    {
-        component: NotecardComponent,
-        data: {
+    new CardItem(
+        NotecardComponent,
+        {
             title: "NoteCard Title",
-            position: { x: 0, y: 0 },
+            oldPosition: undefined,
+            currentPosition: { x: 0, y: 0 },
             usage: "preview",
             additional: {
                 text: "Add your note here"
             }
         }
-    }, {
-        component: ChecklistcardComponent,
-        data: {
+    ),
+    new CardItem(
+        ChecklistcardComponent,
+        {
             title: "Checklist Title",
-            position: { x: 0, y: 0 },
+            oldPosition: undefined,
+            currentPosition: { x: 0, y: 0 },
             usage: "preview",
             additional: {
                 list: [{
@@ -34,25 +36,29 @@ export const cardpreviews: CardItem[] = [
                 ]
             }
         }
-    }
+    )
 ]
 
 export const newcards: CardItem[] = [
-    {
-        component: NotecardComponent,
-        data: {
+    new CardItem(
+
+        NotecardComponent,
+        {
             title: "NoteCard Title",
-            position: { x: -220, y: 0 },
+            oldPosition: { x: -220, y: 0 },
+            currentPosition: { x: -220, y: 0 },
             usage: 'preview',
             additional: {
                 text: "Add your note here"
             }
         }
-    }, {
-        component: ChecklistcardComponent,
-        data: {
+    ),
+    new CardItem(
+        ChecklistcardComponent,
+        {
             title: "Checklist Title",
-            position: { x: -220, y: 220 },
+            oldPosition: { x: -220, y: 220 },
+            currentPosition: { x: -220, y: 220 },
             usage: 'preview',
             additional: {
                 list: [{
@@ -68,44 +74,40 @@ export const newcards: CardItem[] = [
                 ]
             }
         }
-    }
+    )
 ]
 
 export const testcards: CardItem[] = [
-    {
-        component: NotecardComponent,
-        data: {
+    new CardItem(
+        NotecardComponent,
+        {
             title: "Note Card 1",
-            position: {
-                x: 67,
-                y: 50
-            },
+            oldPosition: undefined,
+            currentPosition: { x: 67, y: 50 },
             usage: "card",
             additional: {
                 text: "lorem ipsum dolor sit"
             }
         }
-    }, {
-        component: NotecardComponent,
-        data: {
+    ),
+    new CardItem(
+        NotecardComponent,
+        {
             title: "Note Card 2",
-            position: {
-                x: 474,
-                y: 39
-            },
+            oldPosition: undefined,
+            currentPosition: { x: 474, y: 39 },
             usage: "card",
             additional: {
                 text: "mach mal dein finanzamt"
             }
         }
-    }, {
-        component: ChecklistcardComponent,
-        data: {
+    ),
+    new CardItem(
+        ChecklistcardComponent,
+        {
             title: "Checklist Card 2",
-            position: {
-                x: 207,
-                y: 343
-            },
+            oldPosition: undefined,
+            currentPosition: { x: 207, y: 343 },
             usage: "card",
             additional: {
                 list: [{
@@ -121,5 +123,5 @@ export const testcards: CardItem[] = [
                 ]
             }
         }
-    }
+    )
 ];

@@ -2,11 +2,9 @@
     [ngStyle]="containerStyle" 
     class="odCardNote" 
     cdkDrag 
-    (dblclick)="onDoubleClick()"
-    (tap)="onTap()"
     [cdkDragStartDelay]="100"
     (cdkDragEnded)="dragEnded($event)" 
-    [cdkDragFreeDragPosition]="cardItem.data.currentPosition"
+    [cdkDragFreeDragPosition]="position"
     [cdkDragDisabled]="dragDisabled">
     <div #container></div>
 </div>

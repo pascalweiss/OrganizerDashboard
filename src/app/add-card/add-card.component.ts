@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsService } from '../services/cards.service';
 import { CardItem } from '../shared/card.item';
-import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-add-card',
