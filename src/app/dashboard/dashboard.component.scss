@@ -7,13 +7,19 @@
     position: sticky;
     position: -webkit-sticky; 
         top: 0; /* Sets the sticky toolbar to be on top */
-    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+    z-index: 10; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
 .dashboard {
     background-color: brown; 
     width: 1500px; 
     height: 1000px;
+}
+
+.container {
+    display: inline-box;
+    display: -webkit-inline-box;
+    margin: 0px;
 }
 
 .sidenav {

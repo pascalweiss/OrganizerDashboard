@@ -1,6 +1,6 @@
 import { Component, ComponentFactoryResolver, ElementRef } from '@angular/core';
 import { Container } from '../container.component';
-import { CardItemPosition } from 'src/app/shared/card.item';
+
 
 
 @Component({
@@ -20,8 +20,6 @@ export class CardContainer extends Container {
     };
 
     dragEnded(event) {
-        
-        
     }
 
     onTap() {

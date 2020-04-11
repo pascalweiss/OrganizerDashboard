@@ -1,15 +1,26 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CardsService } from '../services/cards.service';
-import { CardItem, CardItemPosition } from '../shared/card.item';
-import { Globals } from '../shared/globals';
+import { CardItem } from '../shared/card.item';
 import { MatDialog, MatSidenav } from '@angular/material';
-import { skip } from 'rxjs/operators';
+import { skip } from 'rxjs/operators'; 
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [Globals]
+  animations: [
+  trigger('changeWidth', [
+    state('initial', style({
+      'width': '0px',
+    })),
+    state('final', style({
+      'width': '220px',
+    })),
+    transition('initial=>final', animate('600ms 0.2ms ease-in-out')),
+    transition('final=>initial', animate('600ms 0.2ms ease-in-out'))
+  ]),
+]
 })
 export class DashboardComponent implements OnInit {
     @ViewChild(MatSidenav) sidenav: MatSidenav;
@@ -17,9 +28,7 @@ export class DashboardComponent implements OnInit {
   cardItems: CardItem[];
   newCardItems: CardItem[];
   events: string[] = [];
-  opened: boolean;
-
-  shouldRun = true;
+  currentState = 'initial';
   constructor(      
     public dialog: MatDialog,
     private cardsService: CardsService) { }
@@ -37,5 +46,9 @@ export class DashboardComponent implements OnInit {
           this.cardItems.push(copy);
       }))
     });
+  }
+
+  changeState() {
+    this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
   }
 }

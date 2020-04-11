@@ -27,7 +27,6 @@ import { HammerModule } from '@angular/platform-browser';
 import { SidebarPreviewsComponent } from './sidebar-previews/sidebar-previews.component';
 import { PreviewContainerComponent } from './container/previewcontainer/preview.container.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
