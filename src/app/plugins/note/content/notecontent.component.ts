@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BaseContent } from '../basecontent';
+import { BaseContent } from '../../basecontent';
 
 @Component({
   selector: 'app-notecard',
@@ -12,8 +12,4 @@ export class NotecontentComponent extends BaseContent {
   cardStyle = {
     background: "yellow"
   };
-
-  constructor() {
-    super();
-   }
 }

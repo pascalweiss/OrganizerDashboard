@@ -5,7 +5,6 @@
     cdkDragBoundary=".dashboard-boundary"
     (dblclick)="onDoubleClick()"
     (tap)="onTap()"
-    [cdkDragStartDelay]="100"
     (cdkDragEnded)="dragEnded($event)" 
     [cdkDragFreeDragPosition]="cardItem.data.currentPosition"
     [cdkDragDisabled]="dragDisabled">

@@ -1,12 +1,13 @@
 .odCardNote {
   -webkit-user-select: none;
   transform: translate3d(28px, 171px, 0px);
-  width: 200px;
-  height: 200px;
+  width: 13em;
+  height: 13em;
   border: solid 1px #ccc;
   color: rgba(0, 0, 0, 0.87);
   cursor: move;
   display: flex;
+  font-size:0.9em;
   justify-content: center;
   align-items: center;
   text-align: center;

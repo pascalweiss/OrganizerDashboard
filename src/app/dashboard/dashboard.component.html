@@ -5,13 +5,13 @@
   Toolbar Title
 </mat-toolbar>
 <div class="container">
-  <div class="sidenav" [@changeWidth]="currentState">heyho</div>
-    <div class="dashboard dashboard-boundary">
-      <ng-container *ngFor="let cardItem of cardItems">
-          <card-container [cardItem]="cardItem"></card-container>
-      </ng-container>
-      <ng-container *ngFor="let newCardItem of newCardItems">
-          <newcard-container [cardItem]="newCardItem"></newcard-container>
-      </ng-container>
-    </div>
+  <div class="sidenav" [@changeWidth]="currentState"></div>
+  <div class="dashboard dashboard-boundary">
+    <ng-container *ngFor="let cardItem of cardItems">
+      <card-container [cardItem]="cardItem"></card-container>
+    </ng-container>
+    <ng-container *ngFor="let newCardItem of newCardItems">
+      <newcard-container [cardItem]="newCardItem"></newcard-container>
+    </ng-container>
+  </div>
 </div>

@@ -14,14 +14,18 @@ export class CardItemData {
 }
 
 export class CardItem {
-  subject: BehaviorSubject<CardItem>;
-  constructor(public component: Type<any>, public data: CardItemData) {
-    this.subject = new BehaviorSubject(this);
+  dragSubject: BehaviorSubject<CardItem>;
+  doubleClickSubject: BehaviorSubject<CardItem>;
+  constructor(public contentComponent: Type<any>, public editorComponent: Type<any>, 
+    public data: CardItemData) {
+    this.dragSubject = new BehaviorSubject(this);
+    this.doubleClickSubject = new BehaviorSubject(this);
   }
 
   copy(): CardItem {
     return new CardItem(
-      this.component, 
+      this.contentComponent,
+      this.editorComponent, 
       {
         title: this.data.title, 
         oldPosition: {

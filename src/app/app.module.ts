@@ -18,14 +18,16 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './routing/routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NotecontentComponent } from './contents/notecontent/notecontent.component';
-import { ChecklistcontentComponent } from './contents/checklistcontent/checklistcontent.component';
+import { NotecontentComponent } from './plugins/note/content/notecontent.component';
+import { ChecklistcontentComponent } from './plugins/checklist/content/checklistcontent.component';
 import { CardContainer } from './container/cardcontainer/card.container.component';
 import { NewCardContainer } from './container/newcardcontainer/newcard.container.component';
 import { Globals } from './shared/globals';
 import { HammerModule } from '@angular/platform-browser';
 import { SidebarPreviewsComponent } from './sidebar-previews/sidebar-previews.component';
 import { PreviewContainerComponent } from './container/previewcontainer/preview.container.component';
+import { NoteEditorComponent } from './plugins/note/editor/noteeditor.component';
+import { ChecklistEditorComponent } from './plugins/checklist/editor/checklisteditor.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { PreviewContainerComponent } from './container/previewcontainer/preview.
     NewCardContainer,
     SidebarPreviewsComponent,
     PreviewContainerComponent,
+    NoteEditorComponent, 
+    ChecklistEditorComponent
   ],
   imports: [
     BrowserModule,

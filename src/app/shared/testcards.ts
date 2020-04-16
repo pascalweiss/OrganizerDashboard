@@ -1,10 +1,13 @@
 import { CardItem } from './card.item';
-import { NotecontentComponent } from '../contents/notecontent/notecontent.component';
-import { ChecklistcontentComponent } from '../contents/checklistcontent/checklistcontent.component';
+import { NotecontentComponent } from '../plugins/note/content/notecontent.component';
+import { ChecklistcontentComponent } from '../plugins/checklist/content/checklistcontent.component';
+import { NoteEditorComponent } from '../plugins/note/editor/noteeditor.component';
+import { ChecklistEditorComponent } from '../plugins/checklist/editor/checklisteditor.component';
 
 export const cardpreviews: CardItem[] = [
     new CardItem(
         NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "NoteCard Title",
             oldPosition: undefined,
@@ -16,7 +19,8 @@ export const cardpreviews: CardItem[] = [
         }
     ),
     new CardItem(
-        ChecklistcontentComponent,
+        NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "Checklist Title",
             oldPosition: undefined,
@@ -41,8 +45,8 @@ export const cardpreviews: CardItem[] = [
 
 export const newcards: CardItem[] = [
     new CardItem(
-
         NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "NoteCard Title",
             oldPosition: { x: -220, y: 0 },
@@ -54,7 +58,8 @@ export const newcards: CardItem[] = [
         }
     ),
     new CardItem(
-        ChecklistcontentComponent,
+        NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "Checklist Title",
             oldPosition: { x: -220, y: 220 },
@@ -80,6 +85,7 @@ export const newcards: CardItem[] = [
 export const testcards: CardItem[] = [
     new CardItem(
         NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "Note Card 1",
             oldPosition: undefined,
@@ -92,6 +98,7 @@ export const testcards: CardItem[] = [
     ),
     new CardItem(
         NotecontentComponent,
+        NoteEditorComponent,
         {
             title: "Note Card 2",
             oldPosition: undefined,
@@ -104,6 +111,7 @@ export const testcards: CardItem[] = [
     ),
     new CardItem(
         ChecklistcontentComponent,
+        ChecklistEditorComponent,
         {
             title: "Checklist Card 2",
             oldPosition: undefined,

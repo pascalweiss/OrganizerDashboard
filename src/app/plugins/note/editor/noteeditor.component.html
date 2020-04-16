@@ -1,0 +1,26 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="gappx">
+    This is a prototype. You can sign in with any credentials.
+</div>
+<form novalidate #formVariable="ngForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+        <p>
+            <mat-form-field fxLayoutAlign="center">
+                <input matInput placeholder="Title" type="text" [(ngModel)]="title" name="title" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" fxLayoutAlign="center">
+                <mat-label>Note</mat-label>
+                <textarea class="textInput" matInput cols="15" rows="12" [(ngModel)]="text" name="username"
+                    required></textarea>
+            </mat-form-field>
+        </p>
+
+    </mat-dialog-content>
+    <div fxLayoutAlign="center start">
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button type="submit" class="background-primary text-floral-white"
+                [disabled]="formVariable.form.invalid">Ok</button>
+        </mat-dialog-actions>
+    </div>
+</form>

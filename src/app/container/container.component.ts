@@ -1,6 +1,6 @@
 import { Input, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit, ElementRef } from '@angular/core';
 import { CardItem } from '../shared/card.item';
-import { BaseContent } from '../contents/basecontent';
+import { BaseContent } from '../plugins/basecontent';
 
 export abstract class Container implements OnInit {
     @Input() cardItem: CardItem;
@@ -10,6 +10,7 @@ export abstract class Container implements OnInit {
     public isPreview = false;
     public containerStyle: any;
     private doubleTapIndicationTime: number;
+    public boundary = "";
 
     // this function can be used to do additional initialization
     abstract addToOnInit(): void;
@@ -29,7 +30,7 @@ export abstract class Container implements OnInit {
 
 
     setComponentRef() {
-        const factory = this.resolver.resolveComponentFactory(this.cardItem.component);
+        const factory = this.resolver.resolveComponentFactory(this.cardItem.contentComponent);
         const componentRef = this.container.createComponent(factory);
         this.component = (<BaseContent>componentRef.instance);
     }
