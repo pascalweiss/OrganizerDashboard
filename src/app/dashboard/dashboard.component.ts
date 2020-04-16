@@ -4,8 +4,6 @@ import { CardItem } from '../shared/card.item';
 import { MatDialog, MatSidenav } from '@angular/material';
 import { skip } from 'rxjs/operators';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { NotecontentComponent } from '../plugins/note/content/notecontent.component';
-import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -69,10 +67,12 @@ export class DashboardComponent implements OnInit {
   // a copy of this card is created and added to the cardItem array.
   // With the directives in the html, a new card container is created.
   addNewCard(self: DashboardComponent, item: CardItem) {
-    const copy = item.copy()
-    copy.data.title = "added";
-    self.cardItems.push(copy)
-    self.subscribeDoubleClick(copy);
+    if(item.data.currentPosition.x > 0) {
+      const copy = item.copy()
+      copy.data.title = "added";
+      self.cardItems.push(copy)
+      self.subscribeDoubleClick(copy);
+    }
   }
 
   changeState() {
